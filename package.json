@@ -1,0 +1,20 @@
+{
+  "name": "test_gojob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "closest_to_zero.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^25.1.2",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Anthony TOURNERIE",
+  "license": "ISC"
+}
