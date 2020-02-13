@@ -1,10 +1,10 @@
 import closestToZero from "../closestToZero";
 
-function getClosestFromZero(array: Array<number>)
+function getClosestFromZero(array: Array<number>): number
 {
   let absArray: Array<number> = array.map((value: number) => {return Math.abs(value)});
 
-  let minAbs = Math.min.apply(null, absArray);
+  let minAbs: number = Math.min.apply(null, absArray);
 
   return array.indexOf(minAbs) !== -1 ? minAbs : -minAbs;
 }
@@ -14,7 +14,9 @@ describe("Test de la fonction closest_to_zero", () => {
   test.each([
     [[8, 5, 10], 5],
     [[5, 4, -9, 6, -10, -1, 8], -1],
-    [[8, 2, 3, -2], 2]
+    [[8, 2, 3, -2], 2],
+    [[0, -0], 0],
+    [[-0, 0], 0]
   ])("array %p expected %i", (testedArray, expected) => {
     expect(closestToZero(testedArray)).toBe(expected);
   });
